@@ -1,0 +1,94 @@
+.header{
+  
+  padding: 10px;
+  color:lavenderblush;
+  text-align: center;
+  font-family: 'Lucida Sans';
+  font-size: x-large;
+  
+}
+.center {
+    
+    /*border-radius: 10px;*/
+    
+    padding: 10px;
+}
+input[type=text], #email{
+    width: 30%;
+    padding: 9px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: lavender;
+}
+.submit {
+    
+    color:lightcyan;
+    padding: 12px 20px;
+    border: 1px solid blanchedalmond;
+    border-radius: 10px;
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .submit:hover {
+    background-color:lightcyan  ;
+    color:black
+  }
+  
+
+label {
+    padding: 6px 6px 6px 0;
+    display: inline-block;
+   
+  }
+
+/*#name,#rno,#mail,#sec,#dept{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    text-align: left;
+    
+}*/
+ table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    
+  }
+  
+  tr,td,th{
+    border: 1px solid lightsteelblue;
+    padding: 2px;
+    color: lightcyan;
+    text-align: center;
+    font-size: larger;
+  }
+ #t{
+border:0px;
+font-weight: bold;
+font-family: 'Times New Roman', Times, serif;
+font-size: x-large;
+text-align: left;
+  }
+  body{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("stu2.jpg");
+    
+  height:100%;
+  background-repeat: no-repeat;
+  background-position: center;
+ 
+  background-size: cover;
+  }
+  h2{
+    text-align: center;
+    color: lavenderblush;
+  }
+
+  #bp{
+    padding-bottom: 0px;
+  }
+  .close{
+    cursor: pointer;
+  }

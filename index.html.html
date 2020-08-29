@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head><link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      
+    </head>
+    <title>STUDENT REGISTRATION FORM</title>
+    <body>
+        <div  class="header">
+            <h2>Student Resigitration Form</h2></div>
+            <div class="center">
+            <form>
+              
+              <table >
+                
+                    
+                      <tr id="t">
+                       <td id="t"> <label for="name"id="name" >Name:</label></td>
+                        
+                       <td id="t"> <input type="text" id="sname" placeholder="EX-KRITHIKA A S"  ></td>
+                      </tr>
+                         
+                      <tr id="t">    
+                       <td id="t"><label for="rno" id="rno">Register number:</label></td> 
+                        
+                        <td id="t"><input type="text" id="srno"placeholder="EX-19CSR..." ></td>
+                      </tr>
+                        
+
+                    
+                      <tr id="t">
+                        <td id="t"><label for="email" id="mail">E_mail Address:</label></td>
+                        
+                       <td id="t"> <input type="email" id="email"placeholder="xyz@gmail.com"></td>
+                      </tr>
+                        
+                                 
+                    
+                    <tr id="t">
+                      <td id="t"><label for="sec"id ="sec">Section:</label></td>
+                      
+                        <td id="t">
+                      <input type="radio" id="a" name="s"  value="A" >
+                      <label for="a">A</label>
+                      <input type="radio" id="b" name="s" value="B" >
+                      <label for="b">B</label>
+                      <input type="radio" id="c"name="s" value="C" >
+                      <label for="c">C</label>
+                      <input type="radio" id="d"name="s"  value="D" >
+                      <label for="d">D</label></td>
+                    </tr>  
+                   
+                    <tr id="t">
+                     <td id="t"><label for="dept"id ="dept">Department:</label></td> 
+                      
+                     <td id="t">
+                      <input type="radio" id="cse" name="d" value="CSE" >
+                      <label for="cse">CSE</label>
+                      <input type="radio" id="it" name="d" value="IT" >
+                      <label for="it">IT</label>
+                      <input type="radio" id="eee" name="d" value="EEE" >
+                     <label for="eee">EEE</label>
+                     <input type="radio" id="ece" name="d" value="ECE" >
+                     <label for="ece">ECE</label>
+                     <input type="radio" id="ft" name="d"value="FT" >
+                     <label for="ft">FT</label>
+                     <input type="radio" id="ct" name="d" value="CT" >
+                     <label for="ct">CT</label>
+                     <input type="radio" id="mec"name="d" value="MEC" >
+                     <label for="mec">MEC</label>
+                     <input type="radio" id="au" name="d" value="AU" >
+                     <label for="au">AU</label>
+                     <input type="radio" id="eie" name="d" value="EIE" >
+                     <label for="eie">EIE</label></td>
+                     <td id="t"> <span onclick="adddata()" class="submit">Submit</span></td>
+
+                   </tr>
+                  
+                
+      
+    </table>  
+     
+    </form>
+
+      </div>
+          
+          <h2 class="header" id ="bp">STUDENT DETAILS</h2>
+          <hr size="1" width="40%" color="white">
+          <br>
+          <div class ="stu">
+            <table id="stu_det"  >
+              
+                
+                    <th id="t1">Name</th>
+                    <th id="t2">Register number</th>
+                    <th id="t3">E_mail Address</th>
+                    <th id="t4">Section</th>
+                    <th id ="t5">Department</th>
+                    <th id="t6"><i class="material-icons">delete</i></th>
+                   
+              
+              
+            </table>
+          </div>
+            <script >
+              
+              
+
+                function adddata(){
+                  var r1=document.createElement("tr");
+                    var td1=document.createElement("td");
+                    var n=document.getElementById("sname").value;
+                    var node1=document.createTextNode(n);
+                    td1.appendChild(node1);
+                    r1.appendChild(td1);
+                    if (n== '') {
+    alert("You must enter your name");
+  } else {
+    document.getElementById("stu_det").appendChild(r1);
+    
+
+  }
+  
+                   var td2=document.createElement("td");
+                    var r=document.getElementById("srno").value;
+                    var node2=document.createTextNode(r);
+                    td2.appendChild(node2);
+                    r1.appendChild(td2);
+                    if (r == '') {
+    alert("You must enter your register number!");
+  } else {
+    document.getElementById("stu_det").appendChild(r1);
+  }
+  
+                    var td3=document.createElement("td");
+                    var e=document.getElementById("email").value;
+                    var node3=document.createTextNode(e);
+                    td3.appendChild(node3);
+                    r1.appendChild(td3);
+                    if (e == '') {
+    alert("You must enter your email address!");
+  } else {
+    document.getElementById("stu_det").appendChild(r1);
+  }
+  
+  var sec_val;
+  var res=document.getElementsByName("s");
+  for(i=0;i<res.length;i++)
+  {
+    if(res[i].checked)
+    sec_val=res[i].value;
+  }
+    var td4=document.createElement("td");
+    var node4=document.createTextNode(sec_val);
+                    td4.appendChild(node4);
+                    r1.appendChild(td4);
+                    if (sec_val == undefined) {
+    alert("You must select your section!");
+  } else {
+    document.getElementById("stu_det").appendChild(r1);
+  }
+  var dept_val;
+  var d=document.getElementsByName("d");
+  for(i=0;i<d.length;i++)
+  {
+    if(d[i].checked)
+    dept_val=d[i].value;
+  }
+    var td5=document.createElement("td");
+    var node5=document.createTextNode(dept_val);
+                    td5.appendChild(node5);
+                    r1.appendChild(td5);
+                    if (dept_val == undefined) {
+    alert("You must select your department!");
+  } else {
+    document.getElementById("stu_det").appendChild(r1);
+  }
+                
+  
+ 
+ 
+  var span = document.createElement("SPAN");
+ 
+  var txt = document.createTextNode("\u274C");
+  span.className = "close";
+  span.appendChild(txt);
+  r1.appendChild(span);
+  
+ 
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+  
+                }           
+
+
+                
+
+
+
+                
+            </script>
+    </body>
+</html>
